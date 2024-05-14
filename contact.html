@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Girl You Matter</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!--Important for responsive design such as on a mobile device-->
+        <meta name="viewport" content="width=device-width, 
+        inital-scale=1.0">
+    </head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">
+            <img src="images/girlyoumatter-logo.png">
+        </label>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="fifth-page-contact-container">
+        <div class="fifth-page-contact-text">
+            <header>Contact Us</header> 
+        </div>
+    </div>
+
+    <div class="info-comment-container">
+        <div class="information">
+            <h1>Address:</h1> <br>11572 Valverde Ln<br>
+                McKinney, Texas, USA <br>
+                <br>
+            <h1>Phone Number:</h1><br>
+            +1 (214) 236-2283 
+            <br>
+            Sunday to Saturday, 10AM to 10PM <br>
+            <br>
+            <h1>Email:</h1><br>
+            dhruv.tr03@gmail.com <br>
+            Email us your query
+        </div>
+    
+        <div class="comment">
+            <div class="second-comment-box">
+                <form action="https://formspree.io/f/moqovrvb" method="POST" class="comment-form">
+                    <input type="text" name="first" placeholder="Full Name" autocomplete="off" required>
+                    <input type="email" name="last" placeholder="Email" autocomplete="off" required>
+                    <input type="text" name="subject" placeholder="Subject" autocomplete="off" required>
+                    <textarea rows="10" name="message" placeholder="Message" autocomplete="off"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="extra-space">
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () 
+        {
+        // Get the navigation bar element
+        var navBar = document.querySelector('nav');
+
+        // Get all the navigation links
+        var navLinks = document.querySelectorAll('nav ul li a');
+
+        
+        var barsIcon = document.querySelector('.fas.fa-bars');
+
+        
+        // Listen for the scroll event
+        window.addEventListener("scroll", function () 
+        {
+            // Check the scroll position
+            if (window.scrollY > 0) 
+            {
+                // Apply a different background color when scrolled
+                navBar.style.background = "#e66465";
+
+                // Change the color of the navigation links
+                navLinks.forEach(function (link)
+                {
+                    link.style.color = "white";
+                }
+                );
+                barsIcon.style.color = "pink";
+            }
+            else 
+            {
+                // Revert to the original background color and text color when not scrolled
+                navBar.style.background = "";
+                barsIcon.style.color = "white";
+                navLinks.forEach(function (link) 
+                {
+                    link.style.color = "white"; // Set the original text color
+                });
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>
